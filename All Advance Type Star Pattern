@@ -1,0 +1,100 @@
+Q.all pattern name butterfly,solidRhombus,hollowRhombus,diamond,numberPyramid,plndrmPtrn:
+method and logic code here..
+import java.util.*;
+public class advncPtrn{
+    public static void main(String args[]){
+        Scanner s=new Scanner(System.in);
+            System.out.print("enter the numbers n:");
+            int n=s.nextInt();
+            butterfly(n);
+            solidRhombus(n);
+            hollowRhombus(n);
+           diamond(n);
+           numberPyramid(n);
+           plndrmPtrn(n);
+    }
+    public static void butterfly(int n){
+        for(int i=1;i<=2*n;i++){
+            for(int j=1;j<=2*n;j++){
+                if(((i<n)&&(j>i&&j<2*n+1-i))||((i>n+1)&&(j>2*n+1-i&&j<i))){
+                    System.out.print("  ");
+                }
+                else{
+                    System.out.print(" *");
+                }
+            }
+            System.out.println();
+        }
+    }
+    public static void solidRhombus(int n){
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=2*n-i;j++){
+                if(j<=n-i){
+                    System.out.print("  ");
+                }
+                else{
+                    System.out.print(" *");
+                }
+            }
+            System.out.println();
+        }
+    }
+    public static void hollowRhombus(int n){
+        for (int i=1;i<=n;i++){
+            for(int j=1;j<=n-i;j++){
+                System.out.print("  ");
+            }
+            for(int j=1;j<=n;j++){
+                if(i==1||i==n||j==1||j==n){
+                    System.out.print(" *");
+                }
+                else{
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+    public static void diamond(int n){
+        for(int i=1;i<=2*n;i++){
+            for(int j=1;j<=2*n-1;j++){
+                if((i<=n&&j>n-i&&j<n+i)||(i>n&&j>i-n-1&&j<=3*n-i)){
+                    System.out.print("*");
+                }
+                else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+    public static void numberPyramid(int n){
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=n+i;j++){
+                if(j<=n-i||(i+j)%2!=0){
+                    System.out.print(" ");
+                }
+                else{
+                    System.out.print(i);
+                }
+            }
+            System.out.println();
+        }
+    }
+    public static void plndrmPtrn(int n){
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<n+i;j++){
+                if(j<=n-i){
+                    System.out.print(" ");
+                }
+                else if(j<=n&&j>n-i){
+                    System.out.print(n-j+1);
+                }
+                else{
+                    System.out.print(j-n+1);
+                }
+            }
+            System.out.println();
+        }
+    }
+}
