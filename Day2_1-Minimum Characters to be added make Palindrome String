@@ -1,8 +1,9 @@
 Q.Given string str of length N. The task is to find the minimum characters to be added at the front to make string palindrome.
 Note: A palindrome is a word which reads the same backward as forward. Example: "madam".
 logic and method code here..
-class Solution {
-    public static int minChar(String str) {
+public class Solution {
+    public static void main(String []args){
+    String str="abcd"
     int l=str.length();
     int s=0;
     int e=l-1;
@@ -20,6 +21,6 @@ class Solution {
             e=k;
         }
     }
-    return flag;
+    System.out.print(flag);
     }
 }
