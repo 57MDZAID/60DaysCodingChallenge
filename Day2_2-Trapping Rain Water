@@ -1,8 +1,10 @@
 Q.Given an array arr[] of N non-negative integers representing the height of blocks.
 If width of each block is 1, compute how much water can be trapped between the blocks during the rainy season.
 logic and method code here..
-class Solution{
-    static long trappingWater(int arr[], int n) { 
+public class Solution{
+   public static void main(String args[]){
+        int arr[]={5,3,6,2,0,1,4};
+        int n=7;
         int LB[]=new int[n];
         LB[0]=arr[0];
         for(int i=1;i<n;i++){
@@ -18,6 +20,6 @@ class Solution{
             int waterlevel=Math.min(RB[i],LB[i]);
             trappedWater+=waterlevel-arr[i];
         }
-        return trappedWater;
+        System.out.print(trappedWater);
     } 
 }
