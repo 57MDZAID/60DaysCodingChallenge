@@ -1,0 +1,31 @@
+Q.Binary to Decimal & Decimal to Binary
+import java.util.*;
+public class binToDec{
+    public static int dec(int n){
+        int k=1,dec=0;
+        while(n>0){
+            int r=n%10;
+            dec=dec+r*k;
+            k=k*2;
+            n=n/10;
+        }
+        return dec;
+    }
+    public static int binary(int n){
+        int bin=0,k=1;
+        while(n>0){
+            int r=n%2;
+            bin=bin+r*k;
+            k=k*10;
+            n=n/2;
+        }
+        return bin;
+    }
+    public static void main(String args[]){
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter the binary number n:");
+        int n=s.nextInt();
+        System.out.println("The conversion of "+n+" in decimal = "+dec(n));
+        System.out.print("the conersion of decimal to binary is:"+binary(dec(n)));
+    }
+}
