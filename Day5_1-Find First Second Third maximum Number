@@ -1,0 +1,34 @@
+Q.Given an array find first second and third maximum number.
+import java.util.*;
+public class firstSecondThirdMaximum{
+    public static void main(String args[]){
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter the size of array n:");
+        int n=s.nextInt();
+        int arr[]=new int [n];
+        for(int i=0;i<n;i++){
+            arr[i]=s.nextInt();
+        }
+        int firstMax=Integer.MIN_VALUE;
+        int secondMax=firstMax;
+        int thirdMax=firstMax;
+        for(int i=0;i<n;i++){
+            if(arr[i]>firstMax){
+                firstMax=arr[i];
+            }
+        }
+        System.out.println("First Max number is:"+firstMax);
+        for(int i=0;i<n;i++){
+            if(arr[i]>secondMax&&arr[i]<firstMax){
+                secondMax=arr[i];
+            }
+        }
+        System.out.println("Second max number is:"+secondMax);
+        for(int i=0;i<n;i++){
+            if(arr[i]>thirdMax&&arr[i]<secondMax){
+                thirdMax=arr[i];
+            }
+        }
+        System.out.println("Third max number is:"+thirdMax);
+    }
+}
