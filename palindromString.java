@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class palindrom {
+public class palindromString {
 	public static void main(String args[]) {
 		Scanner s=new Scanner(System.in);
 		String str="zaiz";

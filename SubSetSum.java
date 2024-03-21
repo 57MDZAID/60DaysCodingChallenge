@@ -1,5 +1,3 @@
-package com.recursion.backtracking;
-
 public class SubSetSum {
 public static void main(String[] args) { int[] input = { 2, 3, 4, 5 };
 int targetSum = 7;

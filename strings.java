@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 public class strings{
     public static void main(String args[]){
         Scanner s=new Scanner(System.in);
@@ -12,5 +12,6 @@ public class strings{
         System.out.println(lastname);
         System.out.println(fullname);
         System.out.println(sirname);
+        s.close();
     }
 }

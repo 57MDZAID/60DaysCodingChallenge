@@ -1,6 +1,5 @@
-import java.util.*; 
-import java.lang.*; 
-import java.io.*;
+import java.util.Scanner; 
+
 class MST{ 
 int minKey(int key[], Boolean mstSet[],int V)
 {
@@ -57,5 +56,6 @@ graph[i][j]=s.nextInt();
 }
 }
 t.primMST(graph,n);
+s.close();
 }
 }

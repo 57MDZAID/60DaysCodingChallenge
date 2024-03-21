@@ -1,9 +1,7 @@
-package com.recursion.backtracking;
-
-public class SubSetSum {
+public class Graph {
 public static void main(String[] args) { int[] input = { 2, 3, 4, 5 };
 int targetSum = 7;
-SubSetSum subSetSum = new SubSetSum(); subSetSum.findSubSets(input, targetSum);
+Graph Graph = new Graph(); Graph.findSubSets(input, targetSum);
 }
 
 private int[] set;

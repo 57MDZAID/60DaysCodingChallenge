@@ -12,7 +12,7 @@ public class StacksUsingArrayList {
             if(isEmpty()){
                 return -1;
             }
-            int top=list.get(list.size()-1);
+            int top=list.get(list.size()-1);p
             list.remove(list.get(list.size()-1));
             return top;
         }
